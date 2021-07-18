@@ -25,7 +25,7 @@ const Home = () => {
                         key={index}
                         cloudName='nguyenvannam'
                         publicId={imageId}
-                        width='300px'
+                        width='300'
                         crop='scale'
                     />)
             })}

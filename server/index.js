@@ -7,7 +7,7 @@ app.use(express.urlencoded({ limit: '50mb', extended: true }))
 
 app.get('/api/images', async (req, res) => {
     const { resources } = await cloudinary.search.expression('').sort_by('public_id', 'desc').max_results(30).execute()
-    const publicIds = resources.map(file => file.url)
+    const publicIds = resources.map(file => file.public_id)
     console.log(resources)
     res.send(publicIds)
 })
